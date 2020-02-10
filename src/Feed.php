@@ -59,6 +59,26 @@ class Feed
     {
         $this->items[] = $product;
     }
+    
+    /**
+     * Get a count of products.
+     * 
+     * @return integer
+     */
+    public function countProducts()
+    {
+        return count($this->items);
+    }
+
+    /**
+     * Reset the products list.
+     * 
+     * @return array
+     */
+    public function resetProducts()
+    {
+        $this->items = [];
+    }
 
     /**
      * Generate string representation of this feed.
